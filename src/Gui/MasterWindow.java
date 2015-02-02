@@ -61,7 +61,7 @@ public class MasterWindow extends JFrame {
 	private JTextField textField_3;
 	private JLabel label;
 	private JTable table;
-	private JPanel panel_6;
+	private JPanel panel8Jugadores;
 	private JPanel panel_7;
 	private JButton button;
 	private JPanel panel_8;
@@ -76,6 +76,28 @@ public class MasterWindow extends JFrame {
 	private JTextField textField_10;
 	private JTextField textField_11;
 	private ArrayList<String> al;
+	private JPanel panel16Jugadores;
+	private JPanel panel_5;
+	private JButton button_1;
+	private JPanel panel_6;
+	private JTextField textField_12;
+	private JTextField textField_13;
+	private JTextField textField_14;
+	private JTextField textField_15;
+	private JTextField textField_20;
+	private JTextField textField_21;
+	private JTextField textField_22;
+	private JTextField textField_23;
+	private JPanel panel_4;
+	private JTextField textField_16;
+	private JTextField textField_17;
+	private JTextField textField_18;
+	private JTextField textField_19;
+	private JTextField textField_24;
+	private JTextField textField_25;
+	private JTextField textField_26;
+	private JTextField textField_27;
+	private JLabel label_2;
 
 	/**
 	 * Launch the application.
@@ -108,7 +130,8 @@ public class MasterWindow extends JFrame {
 		cardLayoutPrincipal
 				.add(getPanelSeleccionNumJugadores(), "numJugadores");
 		cardLayoutPrincipal.add(getPanel4Jugadores(), "4jugadores");
-		cardLayoutPrincipal.add(getPanel_6(), "8Jugadores");
+		cardLayoutPrincipal.add(getPanel8Jugadores(), "8Jugadores");
+		cardLayoutPrincipal.add(getPanel16Jugadores(), "16jugadores");
 	}
 
 	private JPanel getPanelSeleccionNumJugadores() {
@@ -143,10 +166,13 @@ public class MasterWindow extends JFrame {
 					if (numero <= 4) {
 						((CardLayout) cardLayoutPrincipal.getLayout()).show(
 								cardLayoutPrincipal, "4jugadores");
-					} else if (numero < 8) {
+					} else if (numero <= 8) {
 						((CardLayout) cardLayoutPrincipal.getLayout()).show(
 								cardLayoutPrincipal, "8Jugadores");
 					}
+					else if(numero>8)
+						((CardLayout) cardLayoutPrincipal.getLayout()).show(
+								cardLayoutPrincipal, "16jugadores");
 
 				}
 			});
@@ -324,16 +350,16 @@ public class MasterWindow extends JFrame {
 		return label;
 	}
 
-	private JPanel getPanel_6() {
-		if (panel_6 == null) {
-			panel_6 = new JPanel();
-			panel_6.setLayout(null);
-			panel_6.add(getPanel_7());
-			panel_6.add(getPanel_8());
-			panel_6.add(getLabel_1_1());
-			panel_6.add(getPanel_9());
+	private JPanel getPanel8Jugadores() {
+		if (panel8Jugadores == null) {
+			panel8Jugadores = new JPanel();
+			panel8Jugadores.setLayout(null);
+			panel8Jugadores.add(getPanel_7());
+			panel8Jugadores.add(getPanel_8());
+			panel8Jugadores.add(getLabel_1_1());
+			panel8Jugadores.add(getPanel_9());
 		}
-		return panel_6;
+		return panel8Jugadores;
 	}
 
 	private JPanel getPanel_7() {
@@ -509,4 +535,197 @@ public class MasterWindow extends JFrame {
 
 	}
 
+	private JPanel getPanel16Jugadores() {
+		if (panel16Jugadores == null) {
+			panel16Jugadores = new JPanel();
+			panel16Jugadores.setLayout(null);
+			panel16Jugadores.add(getLabel_2());
+			panel16Jugadores.add(getPanel_5());
+			panel16Jugadores.add(getPanel_6());
+			panel16Jugadores.add(getPanel_4());
+		}
+		return panel16Jugadores;
+	}
+	private JPanel getPanel_5() {
+		if (panel_5 == null) {
+			panel_5 = new JPanel();
+			panel_5.setBounds(0, 370, 653, 33);
+			panel_5.add(getButton_1());
+		}
+		return panel_5;
+	}
+	private JButton getButton_1() {
+		if (button_1 == null) {
+			button_1 = new JButton("Generar");
+		}
+		return button_1;
+	}
+	private JPanel getPanel_6() {
+		if (panel_6 == null) {
+			panel_6 = new JPanel();
+			panel_6.setLayout(null);
+			panel_6.setBounds(10, 11, 141, 294);
+			panel_6.add(getTextField_12());
+			panel_6.add(getTextField_13());
+			panel_6.add(getTextField_14());
+			panel_6.add(getTextField_15());
+			panel_6.add(getTextField_20());
+			panel_6.add(getTextField_21());
+			panel_6.add(getTextField_22());
+			panel_6.add(getTextField_23());
+		}
+		return panel_6;
+	}
+	private JTextField getTextField_12() {
+		if (textField_12 == null) {
+			textField_12 = new JTextField();
+			textField_12.setColumns(10);
+			textField_12.setBounds(0, 0, 160, 27);
+		}
+		return textField_12;
+	}
+	private JTextField getTextField_13() {
+		if (textField_13 == null) {
+			textField_13 = new JTextField();
+			textField_13.setColumns(10);
+			textField_13.setBounds(0, 76, 160, 27);
+		}
+		return textField_13;
+	}
+	private JTextField getTextField_14() {
+		if (textField_14 == null) {
+			textField_14 = new JTextField();
+			textField_14.setColumns(10);
+			textField_14.setBounds(0, 38, 160, 27);
+		}
+		return textField_14;
+	}
+	private JTextField getTextField_15() {
+		if (textField_15 == null) {
+			textField_15 = new JTextField();
+			textField_15.setColumns(10);
+			textField_15.setBounds(0, 114, 160, 27);
+		}
+		return textField_15;
+	}
+	private JTextField getTextField_20() {
+		if (textField_20 == null) {
+			textField_20 = new JTextField();
+			textField_20.setColumns(10);
+			textField_20.setBounds(0, 152, 160, 27);
+		}
+		return textField_20;
+	}
+	private JTextField getTextField_21() {
+		if (textField_21 == null) {
+			textField_21 = new JTextField();
+			textField_21.setColumns(10);
+			textField_21.setBounds(0, 190, 160, 27);
+		}
+		return textField_21;
+	}
+	private JTextField getTextField_22() {
+		if (textField_22 == null) {
+			textField_22 = new JTextField();
+			textField_22.setColumns(10);
+			textField_22.setBounds(0, 228, 160, 27);
+		}
+		return textField_22;
+	}
+	private JTextField getTextField_23() {
+		if (textField_23 == null) {
+			textField_23 = new JTextField();
+			textField_23.setColumns(10);
+			textField_23.setBounds(0, 266, 160, 27);
+		}
+		return textField_23;
+	}
+	private JPanel getPanel_4() {
+		if (panel_4 == null) {
+			panel_4 = new JPanel();
+			panel_4.setLayout(null);
+			panel_4.setBounds(502, 11, 141, 294);
+			panel_4.add(getTextField_16());
+			panel_4.add(getTextField_17());
+			panel_4.add(getTextField_18());
+			panel_4.add(getTextField_19());
+			panel_4.add(getTextField_24());
+			panel_4.add(getTextField_25());
+			panel_4.add(getTextField_26());
+			panel_4.add(getTextField_27());
+		}
+		return panel_4;
+	}
+	private JTextField getTextField_16() {
+		if (textField_16 == null) {
+			textField_16 = new JTextField();
+			textField_16.setColumns(10);
+			textField_16.setBounds(0, 0, 160, 27);
+		}
+		return textField_16;
+	}
+	private JTextField getTextField_17() {
+		if (textField_17 == null) {
+			textField_17 = new JTextField();
+			textField_17.setColumns(10);
+			textField_17.setBounds(0, 76, 160, 27);
+		}
+		return textField_17;
+	}
+	private JTextField getTextField_18() {
+		if (textField_18 == null) {
+			textField_18 = new JTextField();
+			textField_18.setColumns(10);
+			textField_18.setBounds(0, 38, 160, 27);
+		}
+		return textField_18;
+	}
+	private JTextField getTextField_19() {
+		if (textField_19 == null) {
+			textField_19 = new JTextField();
+			textField_19.setColumns(10);
+			textField_19.setBounds(0, 114, 160, 27);
+		}
+		return textField_19;
+	}
+	private JTextField getTextField_24() {
+		if (textField_24 == null) {
+			textField_24 = new JTextField();
+			textField_24.setColumns(10);
+			textField_24.setBounds(0, 152, 160, 27);
+		}
+		return textField_24;
+	}
+	private JTextField getTextField_25() {
+		if (textField_25 == null) {
+			textField_25 = new JTextField();
+			textField_25.setColumns(10);
+			textField_25.setBounds(0, 190, 160, 27);
+		}
+		return textField_25;
+	}
+	private JTextField getTextField_26() {
+		if (textField_26 == null) {
+			textField_26 = new JTextField();
+			textField_26.setColumns(10);
+			textField_26.setBounds(0, 228, 160, 27);
+		}
+		return textField_26;
+	}
+	private JTextField getTextField_27() {
+		if (textField_27 == null) {
+			textField_27 = new JTextField();
+			textField_27.setColumns(10);
+			textField_27.setBounds(0, 266, 160, 27);
+		}
+		return textField_27;
+	}
+	private JLabel getLabel_2() {
+		if (label_2 == null) {
+			label_2 = new JLabel("");
+			label_2.setIcon(new ImageIcon(MasterWindow.class.getResource("/files/img/FIFA.png")));
+			label_2.setBounds(123, 77, 445, 294);
+		}
+		return label_2;
+	}
 }
